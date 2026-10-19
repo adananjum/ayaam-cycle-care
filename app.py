@@ -10,15 +10,18 @@ st.set_page_config(
 )
 
 
+
 # ---------------- DESIGN ----------------
 st.markdown("""
 <style>
+
+/* Main page */
 .stApp {
     background-color: #FFFDFD;
     color: #382D32;
 }
 
-/* Sidebar background and readable text */
+/* Sidebar */
 [data-testid="stSidebar"] {
     background-color: #FFF1F4 !important;
 }
@@ -26,40 +29,93 @@ st.markdown("""
 [data-testid="stSidebar"] p,
 [data-testid="stSidebar"] span,
 [data-testid="stSidebar"] label,
-[data-testid="stSidebar"] .stCaption,
 [data-testid="stSidebar"] [data-testid="stMarkdownContainer"] {
     color: #54283B !important;
 }
 
-/* Sidebar title */
+/* Sidebar headings */
 [data-testid="stSidebar"] h1,
 [data-testid="stSidebar"] h2,
 [data-testid="stSidebar"] h3 {
     color: #873F59 !important;
 }
 
+/* Main headings */
 h1, h2, h3 {
-    color: #873F59;
+    color: #873F59 !important;
 }
 
+/* Normal text */
+.stApp p,
+.stApp label {
+    color: #382D32;
+}
+
+/* FIX: Metric cards on the Home page */
+[data-testid="stMetric"] {
+    background-color: #FCE4EC !important;
+    padding: 20px !important;
+    border-radius: 16px !important;
+    border: 1px solid #F3C4D3 !important;
+    box-shadow: 0 3px 10px rgba(135, 63, 89, 0.08);
+}
+
+/* Card labels: Designed for, Core focus, Built around */
+[data-testid="stMetricLabel"],
+[data-testid="stMetricLabel"] p,
+[data-testid="stMetricLabel"] label {
+    color: #873F59 !important;
+    font-size: 15px !important;
+    font-weight: 600 !important;
+}
+
+/* Card values: You, Cycle care, Privacy */
+[data-testid="stMetricValue"],
+[data-testid="stMetricValue"] div {
+    color: #54283B !important;
+    font-size: 28px !important;
+    font-weight: 700 !important;
+}
+
+/* Buttons */
 .stButton > button {
-    background-color: #B85C78;
-    color: white;
+    background-color: #B85C78 !important;
+    color: #FFFFFF !important;
     border-radius: 10px;
     border: none;
     padding: 0.55rem 1rem;
 }
 
+/* Button hover */
 .stButton > button:hover {
-    background-color: #923F5D;
-    color: white;
+    background-color: #923F5D !important;
+    color: #FFFFFF !important;
 }
 
-[data-testid="stMetric"] {
-    background: #FFF1F4;
-    padding: 16px;
+/* Input fields */
+.stTextInput input,
+.stTextArea textarea {
+    background-color: #FFFFFF !important;
+    color: #382D32 !important;
+    border: 1px solid #E8B8C8 !important;
+}
+
+/* Dropdowns and select controls */
+.stSelectbox div[data-baseweb="select"] {
+    background-color: #FFFFFF;
+}
+
+/* Info messages */
+[data-testid="stAlert"] {
     border-radius: 12px;
 }
+
+/* Consistent rounded cards and containers */
+div[data-testid="stExpander"] {
+    border-radius: 12px;
+    border-color: #F3C4D3;
+}
+
 </style>
 """, unsafe_allow_html=True)
 

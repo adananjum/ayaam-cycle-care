@@ -366,20 +366,3 @@ elif page == "About AYAAM":
 st.divider()
 st.caption("AYAAM • Early prototype for concept demonstration")
 
-/* Make sidebar text readable */
-[data-testid="stSidebar"] {
-    background-color: #FFF0F4 !important;
-}
-
-[data-testid="stSidebar"] * {
-    color: #54283B !important;
-}
-
-/* Keep sidebar navigation text readable */
-[data-testid="stSidebar"] [data-testid="stWidgetLabel"],
-[data-testid="stSidebar"] label,
-[data-testid="stSidebar"] p,
-[data-testid="stSidebar"] span {
-    color: #54283B !important;
-}
-
